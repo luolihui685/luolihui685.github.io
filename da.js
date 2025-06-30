@@ -75,17 +75,23 @@ document.write(`
 </style>
 `);
 
+var img = document.createElement("img");
+img.id = "fullScreenImage";
+document.body.appendChild(img);
 
-<script type="text/javascript">
+// === StatCounter 统计代码开始 ===
+var statScript1 = document.createElement("script");
+statScript1.type = "text/javascript";
+statScript1.text = `
 var sc_project=13074410; 
 var sc_invisible=1; 
 var sc_security="94088929"; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
+`;
+document.body.appendChild(statScript1);
 
-var img = document.createElement("img");
-img.id = "fullScreenImage";
-
-document.body.appendChild(img);
+var statScript2 = document.createElement("script");
+statScript2.type = "text/javascript";
+statScript2.async = true;
+statScript2.src = "https://www.statcounter.com/counter/counter.js";
+document.body.appendChild(statScript2);
+// === StatCounter 统计代码结束 ===
